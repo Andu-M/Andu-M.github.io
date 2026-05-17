@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>La Carretera – Pizza & More</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,600;1,400&family=Dancing+Script:wght@700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Grain overlay -->
+  <div class="grain"></div>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav-logo">La <span>Carretera</span></div>
+    <ul class="nav-links">
+      <li><a href="#despre">Despre noi</a></li>
+      <li><a href="#meniu">Meniu Azi</a></li>
+      <li><a href="#categorii">Ce Oferim</a></li>
+      <li><a href="#recenzii">Recenzii</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="tel:+40344730077" class="nav-cta">📞 Comandă Acum</a>
+    <button class="burger" onclick="toggleMenu()">☰</button>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="close-btn" onclick="toggleMenu()">✕</button>
+    <ul>
+      <li><a href="#despre" onclick="toggleMenu()">Despre noi</a></li>
+      <li><a href="#meniu" onclick="toggleMenu()">Meniu Azi</a></li>
+      <li><a href="#categorii" onclick="toggleMenu()">Ce Oferim</a></li>
+      <li><a href="#recenzii" onclick="toggleMenu()">Recenzii</a></li>
+      <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+    </ul>
+    <a href="tel:+40344730077" class="mobile-cta">📞 +40344730077</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <p class="hero-tagline">Bine ai venit la</p>
+      <div class="hero-logo-circle">
+        <div class="logo-inner">
+          <span class="logo-script">La</span>
+          <span class="logo-big">Carretera</span>
+          <span class="logo-sub">PIZZA <em>& more</em></span>
+        </div>
+      </div>
+      <p class="hero-desc">Locul unde găsești tot ce poftești — pizza artizanală, paste, grătar și multe altele.</p>
+      <div class="hero-btns">
+        <a href="#meniu" class="btn-primary">Vezi Meniul de Azi</a>
+        <a href="#contact" class="btn-secondary">Cum Ajungi</a>
+      </div>
+    </div>
+    <div class="hero-scroll">↓</div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="despre">
+    <div class="about-deco">🍕</div>
+    <div class="about-text">
+      <span class="section-label">Povestea noastră</span>
+      <h2>Pasiune pe farfurie,<br /><em>căldură în suflet</em></h2>
+      <p>La Carretera este mai mult decât un restaurant — e locul unde prietenii se întâlnesc, familiile petrec momente speciale și fiecare masă devine o amintire. Din inima orașului Mizil, vă servim cu cele mai bune rețete italiene, preparate proaspete și o atmosferă ca acasă.</p>
+      <div class="about-stats">
+        <div class="stat">
+          <strong>1.2K+</strong>
+          <span>Fani fideli</span>
+        </div>
+        <div class="stat">
+          <strong>30+</strong>
+          <span>Preparate în meniu</span>
+        </div>
+        <div class="stat">
+          <strong>100%</strong>
+          <span>Ingrediente proaspete</span>
+        </div>
+      </div>
+    </div>
+    <div class="about-img">
+      <div class="about-img-frame">
+        <div class="pizza-visual">
+          <div class="pizza-plate">🍕</div>
+          <div class="float-badge">Proaspăt în fiecare zi</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TODAY'S MENU -->
+  <section class="meniu-azi" id="meniu">
+    <div class="section-header">
+      <span class="section-label">Zilnic actualizat</span>
+      <h2>Meniul de Azi</h2>
+      <p class="section-sub">Preparatele noastre speciale pentru astăzi</p>
+    </div>
+
+    <div class="menu-tabs">
+      <button class="tab active" data-cat="pizza">🍕 Pizza</button>
+      <button class="tab" data-cat="paste">🍝 Paste</button>
+      <button class="tab" data-cat="gratar">🥩 Grătar</button>
+      <button class="tab" data-cat="fastfood">🌯 Fast Food</button>
+      <button class="tab" data-cat="desert">🥞 Desert</button>
+    </div>
+
+    <div class="menu-grid" id="menuGrid">
+      <!-- Pizza items -->
+      <div class="menu-card" data-cat="pizza">
+        <div class="card-emoji">🍕</div>
+        <h3>Margherita</h3>
+        <p>Sos de roșii, mozzarella, busuioc proaspăt</p>
+        <span class="price">25 lei</span>
+      </div>
+      <div class="menu-card" data-cat="pizza">
+        <div class="card-emoji">🍕</div>
+        <h3>Quattro Stagioni</h3>
+        <p>Șuncă, ciuperci, ardei, măsline, mozzarella</p>
+        <span class="price">35 lei</span>
+      </div>
+      <div class="menu-card" data-cat="pizza">
+        <div class="card-emoji">🍕</div>
+        <h3>Pepperoni</h3>
+        <p>Salam picant, mozzarella, sos de roșii</p>
+        <span class="price">33 lei</span>
+      </div>
+      <div class="menu-card featured" data-cat="pizza">
+        <div class="featured-badge">Special zilnic</div>
+        <div class="card-emoji">🍕</div>
+        <h3>La Carretera Special</h3>
+        <p>Carne de vită, roșii cherry, busuioc, mozzarella buffalo</p>
+        <span class="price">42 lei</span>
+      </div>
+      <!-- Paste items -->
+      <div class="menu-card" data-cat="paste">
+        <div class="card-emoji">🍝</div>
+        <h3>Carbonara</h3>
+        <p>Bacon, gălbenuș, parmezan, piper negru</p>
+        <span class="price">30 lei</span>
+      </div>
+      <div class="menu-card" data-cat="paste">
+        <div class="card-emoji">🍝</div>
+        <h3>Bolognese</h3>
+        <p>Carne tocată de vită, sos de roșii, busuioc</p>
+        <span class="price">32 lei</span>
+      </div>
+      <div class="menu-card" data-cat="paste">
+        <div class="card-emoji">🥗</div>
+        <h3>Salată Grecească</h3>
+        <p>Roșii, castraveți, feta, măsline, ceapă roșie</p>
+        <span class="price">22 lei</span>
+      </div>
+      <!-- Gratar items -->
+      <div class="menu-card" data-cat="gratar">
+        <div class="card-emoji">🥩</div>
+        <h3>Cotlet de Porc</h3>
+        <p>Grătar cu garnitură la alegere</p>
+        <span class="price">38 lei</span>
+      </div>
+      <div class="menu-card" data-cat="gratar">
+        <div class="card-emoji">🍗</div>
+        <h3>Aripioare Grătar</h3>
+        <p>Aripioare de pui marinate, sos BBQ</p>
+        <span class="price">32 lei</span>
+      </div>
+      <div class="menu-card featured" data-cat="gratar">
+        <div class="featured-badge">Best seller</div>
+        <div class="card-emoji">🥩</div>
+        <h3>Snițel Vienez</h3>
+        <p>Șnițel pane cu cartofi prăjiți și smântână</p>
+        <span class="price">35 lei</span>
+      </div>
+      <!-- Fast food items -->
+      <div class="menu-card" data-cat="fastfood">
+        <div class="card-emoji">🌯</div>
+        <h3>Shaorma de Pui</h3>
+        <p>Pui la grătar, legume proaspete, sos alb</p>
+        <span class="price">20 lei</span>
+      </div>
+      <div class="menu-card" data-cat="fastfood">
+        <div class="card-emoji">🥙</div>
+        <h3>Kebab</h3>
+        <p>Carne mixtă, ceapă, roșii, sos special</p>
+        <span class="price">22 lei</span>
+      </div>
+      <div class="menu-card" data-cat="fastfood">
+        <div class="card-emoji">🌭</div>
+        <h3>Hot Dog</h3>
+        <p>Cârnat vienez, muștar, ketchup, ceapă prăjită</p>
+        <span class="price">15 lei</span>
+      </div>
+      <!-- Desert items -->
+      <div class="menu-card" data-cat="desert">
+        <div class="card-emoji">🥞</div>
+        <h3>Clătite cu Nutella</h3>
+        <p>Clătite fine cu cremă de ciocolată</p>
+        <span class="price">18 lei</span>
+      </div>
+      <div class="menu-card" data-cat="desert">
+        <div class="card-emoji">🥞</div>
+        <h3>Clătite cu Fructe</h3>
+        <p>Clătite cu căpșuni, frișcă și sirop</p>
+        <span class="price">20 lei</span>
+      </div>
+    </div>
+
+    <p class="menu-note">* Meniul se poate schimba în funcție de disponibilitate. Sunați-ne pentru mai multe detalii.</p>
+  </section>
+
+  <!-- CATEGORIES -->
+  <section class="categorii" id="categorii">
+    <div class="section-header light">
+      <span class="section-label">Diversitate pe masă</span>
+      <h2>Ce Oferim</h2>
+    </div>
+    <div class="cat-grid">
+      <div class="cat-card">
+        <div class="cat-icon">🍕</div>
+        <h3>Pizza</h3>
+        <p>Rețete italiene autentice, aluat crocant, ingrediente proaspete</p>
+      </div>
+      <div class="cat-card">
+        <div class="cat-icon">🍝</div>
+        <h3>Paste & Salate</h3>
+        <p>Paste al dente cu sosuri de casă și salate colorate</p>
+      </div>
+      <div class="cat-card">
+        <div class="cat-icon">🌯</div>
+        <h3>Shaorma & Kebab</h3>
+        <p>Fast food pregătit cu carne proaspătă și sos secret</p>
+      </div>
+      <div class="cat-card">
+        <div class="cat-icon">🥩</div>
+        <h3>Grătar & Șnițel</h3>
+        <p>Carne la grătar, șnițele crocante cu garnituri</p>
+      </div>
+      <div class="cat-card">
+        <div class="cat-icon">🌭</div>
+        <h3>Hot Dog</h3>
+        <p>Hot dog clasic sau cu toppinguri speciale</p>
+      </div>
+      <div class="cat-card">
+        <div class="cat-icon">🥞</div>
+        <h3>Desert & Clătite</h3>
+        <p>Clătite fine cu diverse umputuri dulci</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- GOOGLE REVIEWS -->
+  <section class="recenzii" id="recenzii">
+    <div class="section-header">
+      <span class="section-label">Ce spun clienții noștri</span>
+      <h2>Recenzii Google</h2>
+      <div class="overall-rating">
+        <div class="stars-big">★★★★★</div>
+        <div class="rating-num">4.8</div>
+        <div class="rating-sub">din 5 · Bazat pe recenzii Google</div>
+      </div>
+    </div>
+
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="reviewer-info">
+          <div class="avatar">M</div>
+          <div>
+            <strong>Maria T.</strong>
+            <div class="stars">★★★★★</div>
+          </div>
+          <span class="review-date">acum 2 săptămâni</span>
+        </div>
+        <p>„Pizza este absolut delicioasă! Aluatul este perfect crocant, ingredientele proaspete. Am comandat Quattro Stagioni și a fost cea mai bună pizza din zonă. Recomand cu căldură!"</p>
+        <div class="google-badge">
+          <svg width="16" height="16" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+          Google
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="reviewer-info">
+          <div class="avatar" style="background:#c0392b">A</div>
+          <div>
+            <strong>Alexandru P.</strong>
+            <div class="stars">★★★★★</div>
+          </div>
+          <span class="review-date">acum 1 lună</span>
+        </div>
+        <p>„Shaorma de la La Carretera e pe un nivel complet diferit! Carne proaspătă, sos fantastic. Personalul este extrem de prietenos. Ne-am întors de mai multe ori și nu am fost niciodată dezamăgiți."</p>
+        <div class="google-badge">
+          <svg width="16" height="16" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+          Google
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="reviewer-info">
+          <div class="avatar" style="background:#27ae60">I</div>
+          <div>
+            <strong>Ioana M.</strong>
+            <div class="stars">★★★★★</div>
+          </div>
+          <span class="review-date">acum 3 săptămâni</span>
+        </div>
+        <p>„Clătitele cu Nutella sunt un vis! Le recomand tuturor. Mâncarea ajunge caldă și prezentată frumos. Am comandat și pastele Carbonara — cremă perfectă, porție generoasă. 10/10!"</p>
+        <div class="google-badge">
+          <svg width="16" height="16" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+          Google
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="reviewer-info">
+          <div class="avatar" style="background:#8e44ad">C</div>
+          <div>
+            <strong>Cătălin D.</strong>
+            <div class="stars">★★★★☆</div>
+          </div>
+          <span class="review-date">acum 2 luni</span>
+        </div>
+        <p>„Locul ideal pentru o masă în familie. Atmosferă caldă, prețuri corecte. Snițelul este extraordinar! Revin cu siguranță. Singurul minus este că uneori e aglomerație, dar merită așteptarea."</p>
+        <div class="google-badge">
+          <svg width="16" height="16" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+          Google
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="reviewer-info">
+          <div class="avatar" style="background:#e67e22">E</div>
+          <div>
+            <strong>Elena V.</strong>
+            <div class="stars">★★★★★</div>
+          </div>
+          <span class="review-date">acum 1 săptămână</span>
+        </div>
+        <p>„Comand de aici de mai bine de un an. Pizza Pepperoni este preferata mea absolută. Livrarea este rapidă, ambalajul îngrijit. Unul dintre puținele locuri unde mâncarea corespunde pozelor!"</p>
+        <div class="google-badge">
+          <svg width="16" height="16" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+          Google
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="reviewer-info">
+          <div class="avatar" style="background:#16a085">R</div>
+          <div>
+            <strong>Radu F.</strong>
+            <div class="stars">★★★★★</div>
+          </div>
+          <span class="review-date">acum 3 luni</span>
+        </div>
+        <p>„Kebabul de aici e cel mai bun din Mizil și împrejurimi! Porții mari, prețuri mici. Staff-ul zâmbitor face diferența. Un loc de suflet pentru mine și gașca mea."</p>
+        <div class="google-badge">
+          <svg width="16" height="16" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+          Google
+        </div>
+      </div>
+    </div>
+
+    <div class="review-cta-wrap">
+      <a href="https://maps.google.com" target="_blank" class="btn-google">
+        <svg width="20" height="20" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+        Lasă o Recenzie pe Google
+      </a>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="contact-inner">
+      <div class="contact-info">
+        <span class="section-label light">Vino la noi</span>
+        <h2>Găsește-ne</h2>
+        <div class="info-item">
+          <span class="info-icon">📍</span>
+          <div>
+            <strong>Adresă</strong>
+            <p>Strada Cuza Vodă, Nr. 6<br/>Mizil, Prahova</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <span class="info-icon">📞</span>
+          <div>
+            <strong>Telefon / Comenzi</strong>
+            <p><a href="tel:+40344730077">+40 344 730 077</a></p>
+          </div>
+        </div>
+        <div class="info-item">
+          <span class="info-icon">🕐</span>
+          <div>
+            <strong>Program</strong>
+            <p>Luni – Sâmbătă: 10:00 – 22:00<br/>Duminică: 11:00 – 21:00</p>
+          </div>
+        </div>
+        <a href="tel:+40344730077" class="btn-primary big">📞 Comandă Acum</a>
+      </div>
+      <div class="map-container">
+        <iframe
+          title="La Carretera pe hartă"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2841.0!2d26.4437!3d45.0132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDXCsDAwJzQ3LjUiTiAyNsKwMjYnMzcuMyJF!5e0!3m2!1sro!2sro!4v1600000000000"
+          width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-logo">La <span>Carretera</span></div>
+    <p>Pizza & More · Mizil, Prahova</p>
+    <div class="footer-links">
+      <a href="https://www.facebook.com" target="_blank">Facebook</a>
+      <a href="tel:+40344730077">+40 344 730 077</a>
+    </div>
+    <p class="footer-copy">© 2026 La Carretera. Toate drepturile rezervate.</p>
+  </footer>
+
+  <script src="main.js" defer></script>
+</body>
+</html>
